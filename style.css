@@ -1,0 +1,234 @@
+*{
+    transition: ease-in 0.2s;
+    transition: ease-out 0.2s;
+}
+
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+}
+.menu{
+    width: 100%;
+    background-color:grey;
+    /* border-bottom: gray 4px solid; */
+    position: fixed;
+    /* float: left; */
+    /* position: relative; */   
+    z-index: 1; 
+}
+
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    /* padding: 0; */
+    overflow: hidden;
+    /* float: left; */
+    width: 100%;
+    /* text-align: center;     */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* position: absolute; */
+    
+}
+
+
+.menu .limenu a{
+    display: block;
+    /* text-align: center; */
+    padding: 20px 30px; 
+    text-decoration: none;
+    color: black;
+    
+}
+.menu .limenu{
+    float: left;
+    border-style:none; 
+    border-bottom: gray 4px solid; 
+     
+}
+
+ul.submenu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: none;
+    text-decoration: none;
+    margin-left: 60px;
+    width: fit-content;
+
+
+}
+
+
+    
+.submenu li{
+    /* float: right;  */
+    /* width: 0px; */
+    border-bottom: rgb(255, 255, 255) 4px solid;
+    background-color:gray;
+}
+.submenu li a {  
+    display: block;
+    color: #000000;
+    text-align: left;
+    padding: 5px 5px;
+    text-decoration: none;
+  }
+ 
+  .menu li:hover > ul.submenu{
+
+    display: block;    
+  }
+
+  .menu li:hover{
+    border-bottom: red 4px solid;
+
+  }
+
+.videobanner{
+
+    width: 100%;
+    height: 35em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.videobanner > .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* evita do video passar a altura desejada do .wrap */
+}
+
+.videobanner > .bg-video > video {
+    width: 100%;
+}
+
+
+
+.baixar{
+    display: flex;
+    width: 33%;
+    height: 35em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.baixar p{
+    color: white;
+}
+
+.ja{
+    text-decoration: none;
+    background-color: red;
+    width: 150px;
+    height: 40px; 
+    text-align: center; 
+    display: flex;
+    margin: auto; 
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.jaja{
+    border: white solid 1.5px;
+    width: fit-content;
+    padding: 2px;
+}
+
+.ja:hover{
+    background-color: white;
+    color: black;
+    transition: ease-in 0.2s;
+    transition: ease-out 0.2s;
+}
+
+.textovalorant{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px; background-color: none;
+
+}
+
+.noticias{
+    display: flex;
+    background-image: url(./ece1d7a8a15c7f55cb3a09a8aca0fd5d5d93c9ac-5120x1140.webp);
+    flex-direction: column;
+    
+}
+ 
+.noticias h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+}
+
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 22em;
+    height: 25em;
+}
+.imgcard{
+    height: 60%;
+    justify-self: center;
+    overflow: hidden;
+    
+}
+
+.textcard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap
+
+}
+
+
+ .cards{
+    display: flex;
+    justify-content: space-around;
+ }
+
+
+ .textcard h1{
+    font-size: 21px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 20px;
+    padding: 0;
+    margin: 6% 0;
+ }
+
+ .textcard p{
+    font-size: 19px;
+    line-height: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+ }
+
+ .card .imgcard img:hover{
+    transform: scale(1.2);
+    
+ }
